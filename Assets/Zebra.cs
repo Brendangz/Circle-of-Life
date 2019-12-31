@@ -19,7 +19,25 @@ public class Zebra : MonoBehaviour
         Turn();
         WalkDirection();
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Food":
+                print("Improve");
+                Destroy(collision.gameObject);
+                break;
 
+            case "Predator":
+                print("Damage");
+                break;
+
+            default:
+                print("Safe");
+                break;
+        }
+
+    }
     private void Turn()
     {
         rigidBody.freezeRotation = true;
