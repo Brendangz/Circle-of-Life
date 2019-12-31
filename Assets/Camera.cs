@@ -7,7 +7,7 @@ public class Camera : MonoBehaviour
     public float cameraDistOffset = 10f;
     public float cameraHeightOffset = 10f;
     private Camera mainCamera;
-    private GameObject player;
+    public GameObject player;
 
     // Use this for initialization
     void Start()
