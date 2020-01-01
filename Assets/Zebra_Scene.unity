@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraDistOffset: 20
   cameraHeightOffset: 10
+  player: {fileID: 1622435292}
 --- !u!1001 &1457464699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ GameObject:
   - component: {fileID: 1806516019}
   - component: {fileID: 1806516018}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Predator
   m_TagString: Predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
