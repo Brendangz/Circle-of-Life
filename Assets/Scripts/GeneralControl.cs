@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zebra : MonoBehaviour
+public class GeneralControl : MonoBehaviour
 {
     [SerializeField] float turnSpeed = 100f;
     [SerializeField] float walkSpeed = 100f;
@@ -21,7 +21,9 @@ public class Zebra : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        switch (collision.gameObject.tag)
+       
+
+            switch (collision.gameObject.tag)
         {
             case "Food":
                 print("Improve");
@@ -30,6 +32,7 @@ public class Zebra : MonoBehaviour
 
             case "Predator":
                 print("Damage");
+                Destroy(gameObject);
                 break;
 
             default:
@@ -63,14 +66,14 @@ public class Zebra : MonoBehaviour
         {
             float thrustThisFrame = walkSpeed * Time.deltaTime;
 
-            transform.position -= transform.forward * thrustThisFrame;
+            transform.position += transform.forward * thrustThisFrame;
             
         }
         else if(Input.GetKey(KeyCode.S))
         { 
             float thrustThisFrame = walkSpeed * Time.deltaTime;
 
-            transform.position += transform.forward * thrustThisFrame;
+            transform.position -= transform.forward * thrustThisFrame;
         }
         
     }
