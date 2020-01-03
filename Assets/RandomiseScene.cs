@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class RandomiseScene : MonoBehaviour
 {
-    
-    int levelRange = Random.Range(1, 2);
-
-
     private void Start()
     {
-        OnMouseClick();
+        
     }
+    
 
-    public void OnMouseClick()
+
+    public void ChooseRandomLevel()
     {
-        SceneManager.LoadScene(levelRange);
+        int levelRange = Random.Range(1, 3);
+        // pick random scene when button is pressed
+        SceneManager.LoadScene(levelRange);  
+        //Application.LoadLevel("Zebra_Scene");
     }
 }
 
